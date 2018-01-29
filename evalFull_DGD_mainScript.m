@@ -9,14 +9,15 @@
 %  written by Andreas Hauptmann, January 2018
 %  ==============================================================================
 
-% Note: not fully functional at the moment
-
 clear all, clc, close all
 
 tic
 
-testFile='phantomData/paperTumor'
+% Choose phantom: Tumor, Vessel
+phantomId='Tumor'; 
 
+%Set 
+testFile=['phantomData/paper' phantomId ];
 compInit=true;
 iterNum=0;
 
@@ -31,16 +32,16 @@ for iterNum = 1:4
     %Define network
     filePath=['NetData/3Dgrad_iter' num2str(iterNum) '/3Dgrad.ckpt'];
     %Define current iterate to input into network
-    dataSet  = ['phantomData/paperTestTumor_Iter' num2str(iterNum) '.mat'];
+    dataSet  = ['phantomData/paperTest' phantomId '_Iter' num2str(iterNum) '.mat'];
     %Define result of network
-    fileOutName=['saveIterates/paperTestTumor_Iter' num2str(iterNum) '.h5'];
+    fileOutName=['saveIterates/paperTest' phantomId '_Iter' num2str(iterNum) '.h5'];
     
     % Command line to call python script and evaluation
     systemCommand = ['python EVAL_DGD_iteration.py ' filePath ' ' fileOutName ' ' dataSet ]
     [status, result] = system(systemCommand);
 
     %Placeholder
-    eval_newIterate_3DVessels
+    Call_model_3DVessels
 
 end
 
@@ -50,9 +51,9 @@ iterNum=5;
 %Define network
 filePath=['NetData/3Dgrad_iter' num2str(iterNum) '/3Dgrad.ckpt'];
 %Define current iterate to input into network
-dataSet  = ['phantomData/paperTestTumor_Iter' num2str(iterNum) '.mat'];
+dataSet  = ['phantomData/paperTest' phantomId '_Iter' num2str(iterNum) '.mat'];
 %Define result of network
-fileOutName=['saveIterates/paperTestTumor_Iter' num2str(iterNum) '.h5'];
+fileOutName=['saveIterates/paperTest' phantomId '_Iter' num2str(iterNum) '.h5'];
 
 % Command line to call python script and evaluation
 systemCommand = ['python EVAL_DGD_iteration.py ' filePath ' ' fileOutName ' ' dataSet ]
