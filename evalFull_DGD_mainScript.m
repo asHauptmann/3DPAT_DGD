@@ -14,15 +14,17 @@ clear all, clc, close all
 tic
 
 % Choose phantom: Tumor, Vessel
-phantomId='Tumor'; 
+phantomId='Vessel'; 
 
 %Set 
 testFile=['phantomData/paper' phantomId ];
 compInit=true;
 iterNum=0;
+mkdir('saveIterates')
 
 %Placeholder
 Call_model_3DVessels
+
 
 %% Eval iterates and compute new gradient
 

@@ -1,0 +1,2 @@
+model_checkpoint_path: "/scratch1/NOT_BACKED_UP/ahauptma/Dropbox/UCL/DeepLearning/Tensorflow_experiments/PAT3D_Large/data/3Dgrad_iter4/3Dgrad.ckpt"
+all_model_checkpoint_paths: "/scratch1/NOT_BACKED_UP/ahauptma/Dropbox/UCL/DeepLearning/Tensorflow_experiments/PAT3D_Large/data/3Dgrad_iter4/3Dgrad.ckpt"
