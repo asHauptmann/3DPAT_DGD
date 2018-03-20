@@ -10,4 +10,4 @@ Note: Codes are complete for DGD. Network phantom data for simulated test cases 
 
 - 19 January 2018: First commit
 - 29 January 2018: k-wave wrapper added and evaluation of model
-- 20 February 2018: network data (DGD) and simulated phantoms added
+- 20 March 2018: network data (DGD) and simulated phantoms added
