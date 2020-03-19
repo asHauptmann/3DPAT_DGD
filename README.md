@@ -2,8 +2,8 @@
 
 This repository will collect codes accompanying the publication:
 Hauptmann et al., Model based learning for accelerated, limited-view 3D 
-photoacoustic tomography,  IEEE Transactions on Medical Imaging, 2018.
-https://doi.org/10.1109/TMI.2018.2820382, 
+photoacoustic tomography,  IEEE Transactions on Medical Imaging, 2018:
+https://doi.org/10.1109/TMI.2018.2820382
 
 Scripts need Matlab, k-wave toolbox, Python, and tensorflow
 
